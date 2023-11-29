@@ -333,7 +333,7 @@ def consultar_endereço():
 
 def atualizacoes():
     while True:
-        print("\n Ultima Atualização feita Em: 29/11 13:02\n Versão: v0.23\n")
+        print("\n Ultima Atualização feita Em: 29/11 20:09\n Versão: v0.25\n")
         print("  √ = Feito/Resolvido\n  ~ = Pendente\n  × = Futuramente")
         print("\n     Bugs")
         print(" √ Menu de voltar das atualizações")
