@@ -332,9 +332,12 @@ def consultar_endereço():
         consulta_endereco(endereco)
 
 def atualizacoes():
+    print("\n     Carregando...\n")
     response = requests.get("https://api.github.com/repos/fromofca/Frt")
+    os.system("clear")
+    glob(1)
+    print("\n     Carregado!\n")
     while True:
-        print("\n     Carregando...\n")
         if response.status_code == 200:
             commits_url = response.json()["commits_url"].split("{")[0]
             commits_response = requests.get(commits_url)
@@ -346,9 +349,6 @@ def atualizacoes():
                     commit_datetime = datetime.strptime(latest_commit_time, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
                     commit_datetime = commit_datetime.astimezone(timezone)
                     formatted_time = commit_datetime.strftime("%d/%m/%Y %H:%M")
-                    os.system("clear")
-                    glob(1)
-                    print("\n     Carregado!\n")
                     print(" Total de Alterações:", len(commits))
                     print(" Ultima Alteração feita Em:", formatted_time)
                 else:
