@@ -294,6 +294,7 @@ def dom_servidores(servidor, tt):
     else:
         tempo = 1
     print("\n Tempo Estimado:", tim((len(servidor) * tempo)))
+    print(" Total:", len(servidor))
     print(" Servidores:\n ", ', '.join(servidor), "\n")
     for server in servidor:
         try:
