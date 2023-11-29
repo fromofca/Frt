@@ -80,7 +80,6 @@ def carregar_modulos(pacotes):
     print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Verificando Módulos...\n\033[0m")
     for pacote in pacotes:
         try:
-            import pacote
             modulo = __import__(pacote)
             globals()[pacote] = modulo
             print(f"      Módulo \033[97m{pacote}\033[37m já está importado.")
@@ -350,7 +349,7 @@ def atualizacoes():
                     timezone = pytz.timezone('America/Sao_Paulo')
                     commit_datetime = datetime.strptime(latest_commit_time, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
                     commit_datetime = commit_datetime.astimezone(timezone)
-                    formatted_time = commit_datetime.strftime("%d/%m/%Y ás %H:%M")
+                    formatted_time = commit_datetime.strftime("%d/%m/%Y ás %H:%M:%S")
                     print(" Total de Alterações:", len(commits))
                     print(" Ultima Alteração feita Em:", formatted_time)
                 else:
