@@ -97,12 +97,13 @@ def carregar_modulos(pacotes):
     print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Todos os módulos estão instalados.\n      Sistema sendo Iniciado...\033[0m")
     time.sleep(1.25)
     
-carregar_modulos(["time","datetime","python-whois","futures","PySocks","socket","http.client","requests"])
+carregar_modulos(["time","pytz","datetime","python-whois","futures","PySocks","socket","http.client","requests"])
 import socket
 import http.client
 import requests
+import pytz
 from datetime import datetime
-import whois as wwh
+from whois import whois
 def menu(tipo):
     if tipo == 1:
         print("      Developer: From")
@@ -122,7 +123,7 @@ def menu(tipo):
 
 def consulta_info(nome):
     try:
-        info = wwh.whois(nome)
+        info = whois.whois(nome)
         if 'name' in info and info['name'] is None:
             input("\n        Domínio inválido, Pressione Enter para voltar.\n")
         else:
@@ -341,19 +342,21 @@ def atualizacoes():
                 commits = commits_response.json()
                 if len(commits) > 0:
                     latest_commit_time = commits[0]["commit"]["committer"]["date"]
-                    commit_datetime = datetime.strptime(latest_commit_time, "%Y-%m-%dT%H:%M:%SZ")
+                    timezone = pytz.timezone('America/Sao_Paulo')
+                    commit_datetime = datetime.strptime(latest_commit_time, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
+                    commit_datetime = commit_datetime.astimezone(timezone)
                     formatted_time = commit_datetime.strftime("%d/%m/%Y %H:%M")
                     os.system("clear")
                     glob(1)
                     print("\n     Carregado!\n")
                     print(" Total de Alterações:", len(commits))
-                    print(" Ultima Alteração feita Em: 29/11 20:09")
+                    print(" Ultima Alteração feita Em:", formatted_time)
                 else:
                     os.system("clear")
                     glob(1)
                     print("\n     Carregado!\n")
                     print(" Nenhuma Alteração Encontrada")
-        print("Versão: v0.25\n")
+        print(" Versão do Sistema: v0.25\n")
         print("  √ = Feito/Resolvido\n  ~ = Pendente\n  × = Futuramente")
         print("\n     Bugs")
         print(" √ Menu de voltar das atualizações")
