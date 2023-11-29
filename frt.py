@@ -80,6 +80,7 @@ def carregar_modulos(pacotes):
     print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Verificando Módulos...\n\033[0m")
     for pacote in pacotes:
         try:
+            import pacote
             modulo = __import__(pacote)
             globals()[pacote] = modulo
             print(f"      Módulo \033[97m{pacote}\033[37m já está importado.")
