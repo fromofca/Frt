@@ -61,8 +61,6 @@ def glob(tipo):
             parte = linha[j * metade : (j + 1) * metade]
             print(f'{cor}{parte}', end='')
         print()
-    print("                        vBeta")
-    print("                        ©️ Copyright 2023-2024")
         
 import time,subprocess
 
@@ -343,7 +341,7 @@ def atualizacoes():
         os.system("clear")
         os.system("clear")
         glob(1)
-        print("\n Ultima Atualização feita Em: 29/11 10:32")
+        print("\n Ultima Atualização feita Em: 29/11 10:41\n Versão: v0.2\n")
         print("  √ = Feito\n  ~ = Pendente\n  × = Futuramente")
         print("\n     Novidades")
         print(" √ Novo menu de Atualizações")
