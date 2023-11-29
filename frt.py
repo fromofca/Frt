@@ -98,7 +98,8 @@ def carregar_modulos(pacotes):
     time.sleep(1.25)
     
 carregar_modulos(["time","whois","socket","http.client","requests"])
-import socket,http.client,requests,whois
+import socket,http.client,requests
+import whois as wwh
 def menu(tipo):
     if tipo == 1:
         print("      Developer: From")
@@ -118,7 +119,7 @@ def menu(tipo):
 
 def consulta_info(nome):
     try:
-        info = whois.whois(nome)
+        info = wwh.whois(nome)
         if 'name' in info and info['name'] is None:
             input("\n        Domínio inválido, Pressione Enter para voltar.\n")
         else:
