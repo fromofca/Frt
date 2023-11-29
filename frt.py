@@ -100,23 +100,17 @@ carregar_modulos(["time","whois","socket","http.client","requests"])
 import socket,http.client,requests,whois
 def menu(tipo):
     if tipo == 1:
-      response = requests.get("https://github.com/fromofca/Frt/blob/main/frt.py")
-          if response.status_code == 200:
-            commits = response.json()
-            print("Últimas atualizações:")
-            for commit in commits:
-            commit_message = commit["commit"]["message"]
-            commit_date = commit["commit"]["committer"]["date"]
-            print(f"- {commit_message} ({commit_date})")
         print("      Developer: From")
         print("      Discord: fromdev#0")
+        print("Última Atualização: 29/10 10:25")
         print("      MENU: Principal\n")
         print("1 - Consulta")
         print("0 - Sair")
     elif tipo == 2:
         print("      MENU: Consulta\n")
-        print("2 - Consultar IP")
-        print("1 - Consultar Site")
+        print("3 - Consultar IP")
+        print("2 - Consultar Site")
+        print("1 - Atualizações")
         print("0 - Voltar")
     else: 
         print("      MENU: Inválido")
@@ -346,12 +340,12 @@ def main():
                 glob(1)
                 menu(2)
                 opcao_consulta = input("\n>  ")
-                if opcao_consulta == "2":
+                if opcao_consulta == "3":
                     os.system("clear")
                     os.system("clear")
                     glob(1)
                     consultar_endereço()
-                elif opcao_consulta == "1":
+                elif opcao_consulta == "2":
                     os.system("clear")
                     os.system("clear")
                     glob(1)
