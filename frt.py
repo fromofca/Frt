@@ -329,10 +329,11 @@ def consultar_endereço():
 
 def atualizacoes():
     while True:
-        print("\n Ultima Atualização feita Em: 29/11 12:06\n Versão: v0.23\n")
+        print("\n Ultima Atualização feita Em: 29/11 12:55\n Versão: v0.23\n")
         print("  √ = Feito/Resolvido\n  ~ = Pendente\n  × = Futuramente")
         print("\n     Bugs")
         print(" √ Menu de voltar das atualizações")
+        print(" √ Módulo whois do menu de Consutar IP resolvido (consulta)")
         print("\n     Novidades")
         print(" √ Novo menu de Atualizações")
         print(" ~ Menu de Info CPF (consulta)")
