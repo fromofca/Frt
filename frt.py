@@ -97,8 +97,12 @@ def carregar_modulos(pacotes):
     print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Todos os módulos estão instalados.\n      Sistema sendo Iniciado...\033[0m")
     time.sleep(1.25)
     
-carregar_modulos(["time","python-whois","socket","http.client","requests"])
-import socket,http.client,requests
+carregar_modulos(["time","python-whois","futures","PySocks","socket","http.client","requests"])
+import socket
+import http.client
+import requests
+import futures
+import PySocks
 import whois as wwh
 def menu(tipo):
     if tipo == 1:
