@@ -336,7 +336,7 @@ def atualizacoes():
         print(" ~ Menu de Info Minecraft (consulta)")
         print(" × Novo Menu de Utilidades")
         at = input("\n0 - Voltar\n\n> ")
-        if at == 0:
+        if at == "0":
             main()
             break
         else:
