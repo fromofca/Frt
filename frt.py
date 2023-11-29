@@ -101,6 +101,9 @@ carregar_modulos(["time","pytz","datetime","python-whois","futures","PySocks","s
 import socket
 import http.client
 import requests
+import python-whois
+import futures
+import PySocks
 import pytz
 from datetime import datetime
 from whois import whois
@@ -348,7 +351,7 @@ def atualizacoes():
                     timezone = pytz.timezone('America/Sao_Paulo')
                     commit_datetime = datetime.strptime(latest_commit_time, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
                     commit_datetime = commit_datetime.astimezone(timezone)
-                    formatted_time = commit_datetime.strftime("%d/%m/%Y %H:%M")
+                    formatted_time = commit_datetime.strftime("%d/%m/%Y ás %H:%M")
                     print(" Total de Alterações:", len(commits))
                     print(" Ultima Alteração feita Em:", formatted_time)
                 else:
@@ -357,15 +360,15 @@ def atualizacoes():
                     print("\n     Carregado!\n")
                     print(" Nenhuma Alteração Encontrada")
         print(" Versão do Sistema: v0.25\n")
-        print("  √ = Feito/Resolvido\n  ~ = Pendente\n  × = Futuramente")
+        print("  + = Feito/Resolvido\n  % = Pendente\n  - = Futuramente")
         print("\n     Bugs")
-        print(" √ Menu de voltar das atualizações")
-        print(" √ Módulo whois do menu de Consutar IP resolvido (consulta)")
+        print(" + Menu de voltar das atualizações")
+        print(" + Módulo whois do menu de Consutar IP resolvido (consulta)")
         print("\n     Novidades")
-        print(" √ Novo menu de Atualizações")
-        print(" ~ Menu de Info CPF (consulta)")
-        print(" ~ Menu de Info Minecraft (consulta)")
-        print(" × Novo Menu de Utilidades")
+        print(" + Novo menu de Atualizações")
+        print(" % Menu de Info CPF (consulta)")
+        print(" % Menu de Info Minecraft (consulta)")
+        print(" - Novo Menu de Utilidades")
         at = input("\n0 - Voltar\n\n> ")
         if at == "0":
             main()
