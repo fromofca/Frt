@@ -101,7 +101,6 @@ carregar_modulos(["time","pytz","datetime","python-whois","futures","PySocks","s
 import socket
 import http.client
 import requests
-import PySocks
 import pytz
 from datetime import datetime
 from whois import whois
