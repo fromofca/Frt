@@ -60,6 +60,8 @@ def glob(tipo):
             parte = linha[j * metade : (j + 1) * metade]
             print(f'{cor}{parte}', end='')
         print()
+    print("                        vBeta")
+    print("                        ©️ Copyright 2023-2024")
         
 import time,subprocess
 
@@ -102,7 +104,6 @@ def menu(tipo):
     if tipo == 1:
         print("      Developer: From")
         print("      Discord: fromdev#0")
-        print("Última Atualização: 29/10 10:25")
         print("      MENU: Principal\n")
         print("1 - Consulta")
         print("0 - Sair")
@@ -340,12 +341,12 @@ def main():
                 glob(1)
                 menu(2)
                 opcao_consulta = input("\n>  ")
-                if opcao_consulta == "3":
+                if opcao_consulta == "2":
                     os.system("clear")
                     os.system("clear")
                     glob(1)
                     consultar_endereço()
-                elif opcao_consulta == "2":
+                elif opcao_consulta == "1":
                     os.system("clear")
                     os.system("clear")
                     glob(1)
