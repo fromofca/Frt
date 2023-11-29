@@ -53,6 +53,7 @@ def glob(tipo):
                       ......
     """
     linhas = texto.split('\n')
+    os.system("clear")
     for i, linha in enumerate(linhas):
         tamanho = len(linha)
         metade = tamanho // len(cores)
@@ -105,13 +106,13 @@ def menu(tipo):
         print("      Developer: From")
         print("      Discord: fromdev#0")
         print("      MENU: Principal\n")
-        print("1 - Consulta")
+        print("2 - Consulta")
+        print("1 - Atualizações")
         print("0 - Sair")
     elif tipo == 2:
         print("      MENU: Consulta\n")
-        print("3 - Consultar IP")
-        print("2 - Consultar Site")
-        print("1 - Atualizações")
+        print("2 - Consultar IP")
+        print("1 - Consultar Site")
         print("0 - Voltar")
     else: 
         print("      MENU: Inválido")
@@ -326,6 +327,29 @@ def consultar_endereço():
         menu(2)
     else:
         consulta_endereco(endereco)
+
+def atualizacoes():
+    print("\n Ultima Atualização feita Em: 29/11 10:32")
+    print("  √ = Feito\n  ~ = Pendente\n  × = Futuramente")
+    print("\n     Novidades")
+    print(" √ Novo menu de Atualizações")
+    print(" ~ Menu de Info CPF (consulta)")
+    print(" ~ Menu de Info Minecraft (consulta)")
+    print(" × Novo Menu de Utilidades")
+    at = input("\n0 - Voltar\n> ")
+    if at == 0:
+        main()
+    else:
+        os.system("clear")
+        os.system("clear")
+        glob(1)
+        print("\n Ultima Atualização feita Em: 29/11 10:32")
+        print("  √ = Feito\n  ~ = Pendente\n  × = Futuramente")
+        print("\n     Novidades")
+        print(" √ Novo menu de Atualizações")
+        print(" ~ Menu de Info CPF (consulta)")
+        print(" ~ Menu de Info Minecraft (consulta)")
+        print(" × Novo Menu de Utilidades")
             
 def main():
     while True:
@@ -334,7 +358,7 @@ def main():
         glob(1)
         menu(1)
         opcao_principal = input("\n>  ")
-        if opcao_principal == "1":
+        if opcao_principal == "2":
             while True:
                 os.system("clear")
                 os.system("clear")
@@ -355,6 +379,11 @@ def main():
                     break
                 else:
                     print(" ")
+        elif opcao_principal == "1":
+            os.system("clear")
+            os.system("clear")
+            glob(1)
+            atualizacoes()
         elif opcao_principal == "0":
             os.system("clear")
             os.system("clear")
