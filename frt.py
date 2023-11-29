@@ -100,6 +100,14 @@ carregar_modulos(["time","whois","socket","http.client","requests"])
 import socket,http.client,requests,whois
 def menu(tipo):
     if tipo == 1:
+      response = requests.get("https://github.com/fromofca/Frt/blob/main/frt.py")
+          if response.status_code == 200:
+            commits = response.json()
+            print("Últimas atualizações:")
+            for commit in commits:
+            commit_message = commit["commit"]["message"]
+            commit_date = commit["commit"]["committer"]["date"]
+            print(f"- {commit_message} ({commit_date})")
         print("      Developer: From")
         print("      Discord: fromdev#0")
         print("      MENU: Principal\n")
