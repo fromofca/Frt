@@ -338,6 +338,7 @@ def atualizacoes():
         at = input("\n0 - Voltar\n\n> ")
         if at == 0:
             main()
+            break
         else:
             os.system("clear")
             os.system("clear")
