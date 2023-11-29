@@ -101,7 +101,7 @@ carregar_modulos(["time","datetime","python-whois","futures","PySocks","socket",
 import socket
 import http.client
 import requests
-import datetime
+from datetime import datetime
 import whois as wwh
 def menu(tipo):
     if tipo == 1:
