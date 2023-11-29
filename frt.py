@@ -327,27 +327,20 @@ def consultar_endereço():
         consulta_endereco(endereco)
 
 def atualizacoes():
-    print("\n Ultima Atualização feita Em: 29/11 10:32")
+    print("\n Ultima Atualização feita Em: 29/11 10:43\n Versão: v0.2\n")
     print("  √ = Feito\n  ~ = Pendente\n  × = Futuramente")
     print("\n     Novidades")
     print(" √ Novo menu de Atualizações")
     print(" ~ Menu de Info CPF (consulta)")
     print(" ~ Menu de Info Minecraft (consulta)")
     print(" × Novo Menu de Utilidades")
-    at = input("\n0 - Voltar\n> ")
+    at = input("\n0 - Voltar\n\n> ")
     if at == 0:
         main()
     else:
         os.system("clear")
         os.system("clear")
         glob(1)
-        print("\n Ultima Atualização feita Em: 29/11 10:41\n Versão: v0.2\n")
-        print("  √ = Feito\n  ~ = Pendente\n  × = Futuramente")
-        print("\n     Novidades")
-        print(" √ Novo menu de Atualizações")
-        print(" ~ Menu de Info CPF (consulta)")
-        print(" ~ Menu de Info Minecraft (consulta)")
-        print(" × Novo Menu de Utilidades")
             
 def main():
     while True:
