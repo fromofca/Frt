@@ -13,7 +13,6 @@ def tim(tt):
 
 def carregar_modulos(pacotes):
     os.system("clear")
-    glob(3)
     print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Verificando Módulos...\n\033[0m")
     for pacote in pacotes:
         try:
