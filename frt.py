@@ -51,14 +51,28 @@ def glob(tipo):
     """
     linhas = texto.split('\n')
     os.system("clear")
+    num_linhas = len(linhas)
+    num_colunas = len(linhas[0])
+    for d in range(num_linhas + num_colunas - 1):
+        i_inicio = max(0, d - num_colunas + 1)
+        i_fim = min(d, num_linhas - 1)
+        for i in range(i_inicio, i_fim + 1):
+            j = d - i
+            tamanho = len(linhas[i])
+            metade = tamanho // len(cores)
+            for k, cor in enumerate(cores):
+                parte = linhas[i][j * metade: (j + 1) * metade]
+                print(f'{cor}{parte}', end='')
+            print()
+            """
     for i, linha in enumerate(linhas):
         tamanho = len(linha)
         metade = tamanho // len(cores)
         for j, cor in enumerate(cores):
-            parte = linha[j]
+            parte = linha[j * metade : (j + 1) * metade]
             print(f'{cor}{parte}', end='')
         print()
-        
+        """
 import time,subprocess
 
 def tim(tt):
