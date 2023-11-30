@@ -55,11 +55,11 @@ def glob(tipo):
     for i, linha in enumerate(linhas):
         espacos = ' ' * i
         tamanho = len(linha)
-        for j, caractere in enumerate(linha):
-            cor_index = (i + j) % len(cores)  # Alternar as cores a cada caractere
-            cor = cores[cor_index]
-            espacos_parte = ' ' * (tamanho_max - len(espacos) - 1)  # -1 para considerar o caractere
-            print(f'{espacos}{cor}{caractere}{espacos_parte}{reset_cor}')
+        metade = tamanho // len(cores)
+        for j, cor in enumerate(cores):
+            parte = linha[j * metade : (j + 1) * metade]
+            espacos_parte = ' ' * (tamanho_max - len(espacos) - len(parte))
+            print(f'{espacos}{cor}{parte}{espacos_parte}')
         print()
 
 import time,subprocess
