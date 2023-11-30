@@ -58,10 +58,10 @@ def glob(tipo):
         i_fim = min(d, num_linhas - 1)
         for i in range(i_inicio, i_fim + 1):
             j = d - i
-            tamanho = len(linhas[i])
+            tamanho = len(linhas)
             metade = tamanho // len(cores)
             for k, cor in enumerate(cores):
-                parte = linhas[i][j * metade: (j + 1) * metade]
+                parte = linhas[j * metade: (j + 1) * metade]
                 print(f'{cor}{parte}', end='')
             print()
             """
