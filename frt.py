@@ -181,7 +181,7 @@ def consulta_info2(endereco):
             os.system("clear")
             glob(1)
             print("\n        Carregado!\n")
-            print(" Status:",data['status'])
+            print(" Status:",data['status'],"\n")
             print(' IP:', data['query'])
             print(' Proxy:', data['proxy'])
             print(' Host:', data['hosting'])
@@ -306,10 +306,10 @@ def dom_servidores(servidor, tt):
     for server in servidor:
         try:
             socket.create_connection((server, 53), timeout=int(tempo))
-            print(f"     \033[92m+ {server} \033[32mIP: {socket.gethostbyname(server)}\033[32m")
+            print(f"     \033[0;32m+ {server} \033[1;92mIP: {socket.gethostbyname(server)}\033[32m")
         except socket.error as e:
-            print(f"     \033[91m× {server}")
-    input("\033[32m\n        Pressione Enter para voltar.")
+            print(f"     \033[0;91m× {server}")
+    input("\033[1;92m\n        Pressione Enter para voltar.")
     
 def consultar_site():
     os.system("clear")
@@ -360,7 +360,7 @@ def atualizacoes():
         print("     Bugs")
         print(" [29/11] Menu de sair do sistema resolvido")
         print(" [29/11] Menu de voltar das atualizações")
-        print(" [29/11] Módulo whois do menu de Consutar IP resolvido (consulta)")
+        print(" [29/11] Menu de Consutar IP resolvido (consulta)")
         print("\n     Alterações")
         print(" [30/11] Novo layout pro sistema")
         print(" [29/11] Código de execução com menos delay")
