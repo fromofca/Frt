@@ -301,7 +301,7 @@ def dom_servidores(servidor, tt):
     for server in servidor:
         try:
             socket.create_connection((server, 53), timeout=int(tempo))
-            print(f"     + {server} {socket.gethostbyname(server)}\033[32m")
+            print(f"     + {server} {socket.gethostbyname(server)}")
         except socket.error as e:
             print(f"     × {server}")
     input("\n        Pressione Enter para voltar.\n")
