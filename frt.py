@@ -40,7 +40,6 @@ from colour import Color
 from datetime import datetime
 import whois
 
-
 def msg(tipo,msg):
     if tipo == 1:
         cores = [
@@ -86,7 +85,7 @@ def msg(tipo,msg):
         print()
 
 def glob(tipo):
-	msg(tipo,""""
+	msg(tipo,"""
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠤⠖⣒⣒⣒⣒⡲⠦⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠖⠋⠁⠀⠀⠀⠀⠀⠀⠈⠉⠉⠓⠾⣝⡲⣄⣀⣀⣀⣀⣀⡀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢮⡹⣄⠀⠀⠈⠉⠓⢆⠀
@@ -102,7 +101,7 @@ def glob(tipo):
 ⠀⠀⠀⠈⠉⠉⠉⠉⠉⠙⠧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣚⡽⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠓⠦⠤⢤⣤⣤⣤⠤⠴⠒⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-⠀⠀⠀⠀⠀⠀ """")
+⠀⠀⠀⠀⠀⠀ """)
 def menu(tipo):
     if tipo == 1:
         print("      Developer: From")
