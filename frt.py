@@ -369,11 +369,10 @@ def atualizacoes():
         print(" [29/11] Código de execução público com menos delay")
         print(" [29/11] Menu de carregamento com menos delay")
         print("\n     Novidades")
-        print("  + = Feito\n  % = Pendente\n  - = Futuramente")
-        print(" + [29/11] Novo menu de Atualizações")
+        print("\n  + = Feito\n  % = Pendente\n")
+        print(" + [29/11] Novo menu de Atualizações (principal)")
         print(" % Menu de Info CPF (consulta)")
         print(" % Menu de Info Minecraft (consulta)")
-        print(" - Novo Menu de Utilidades")
         at = input("\n0 - Voltar\n\n> ")
         if at == "0":
             main()
