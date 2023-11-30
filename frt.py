@@ -82,9 +82,9 @@ def carregar_modulos(pacotes):
             print(f"      Módulo \033[97m{pacote}\033[37m já está importado.")
         except ImportError:
             try:
-                resultado = subprocess.check_output(['pip', 'show', pacote])
+                __import__(pacote)
                 print(f"      Módulo \033[97m{pacote}\033[37m já está instalado.")
-            except subprocess.CalledProcessError:
+            except Exception:
                 print(f"      Módulo \033[97m{pacote}\033[37m está sendo instalado.")
                 resultado = os.system(f'pip install {pacote}')
                 if resultado != 0:
@@ -92,13 +92,8 @@ def carregar_modulos(pacotes):
     os.system("clear")
     glob(33)
     print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Todos os módulos estão instalados.\n      Sistema sendo Iniciado...\033[0m")
-    time.sleep(1.25)
-mod = ["time","pytz","datetime","python-whois","futures","PySocks","socket","http.client","requests"]
-for mods in mod:
-    try:
-        __import__(mods)
-    except Exception as e:
-        carregar_modulos(mods)
+
+carregar_modulos(["time","pytz","datetime","python-whois","futures","PySocks","socket","http.client","requests"])
 import socket
 import http.client
 import requests
