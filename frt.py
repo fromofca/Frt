@@ -1,5 +1,27 @@
 import os
 
+
+def cora(text):
+    lines = text.split('\n')
+    max_len = max(len(line) for line in lines)
+
+    for i in range(len(lines)):
+        line = lines[i]
+        colored_line = ""
+        for j in range(len(line)):
+            if j < i:
+                colored_line += '\033[1;31m' + line[j]  # Vermelho
+            else:
+                colored_line += '\033[1;34m' + line[j]  # Azul
+
+        # Preenche o restante da linha com espaços para alinhar as cores
+        colored_line += '\033[0m' + ' ' * (max_len - len(line))
+
+        print(colored_line)
+
+    # Reseta a cor após imprimir o texto
+    print('\033[0m')
+    
 def glob(tipo):
     if tipo == 1:
         cores = [
@@ -51,6 +73,8 @@ def glob(tipo):
     """
     linhas = texto.split('\n')
     os.system("clear")
+    cora(texto)
+    """
     tamanho_max = max(len(linha) for linha in linhas)
     for i, linha in enumerate(linhas):
         tamanho = len(linha)
@@ -59,6 +83,7 @@ def glob(tipo):
             parte = linha[j * metade : (j + 1) * metade]
             print(f'{espacos}{cor}{parte}{espacos_parte}')
         print()
+    """
 
 import time,subprocess
 
