@@ -58,17 +58,15 @@ def glob(tipo):
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⢿⡿⣿⢿⡿⣿⣿⣿⣿⣿⣿⣿⣮⣷⣾⣼⣳⣾⣼⣿⣿⣿⣿⣿⣿⡿⣿⢿⡿⣿⠿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    """
-    linhas = texto.split('\n')
-    os.system("clear")
-    tamanho_max = max(len(linha) for linha in linhas)
-    for i, linha in enumerate(linhas):
-        tamanho = len(linha)
-        metade = tamanho // len(cores)
-        for j, cor in enumerate(cores):
-            parte = linha[j * metade : (j + 1) * metade]
-            print(f'{cor}{parte}')
+⠀⠀⠀⠀⠀⠀ """
+        linhas = texto.split('\n')
+        for i, linha in enumerate(linhas):
+            tamanho = len(linha)
+            metade = tamanho // len(cores)
+            for j, cor in enumerate(cores):
+                parte = linha[j * metade : (j + 1) * metade]
+                print(f'{cor}{parte}', end='')
+    
         print()
 
 import time,subprocess
