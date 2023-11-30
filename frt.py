@@ -41,7 +41,7 @@ def msg(tipo,msg):
         print()
 
 def glob(tipo):
-	msg(tipo,"""
+	msg(tipo,f"""
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠤⠖⣒⣒⣒⣒⡲⠦⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠖⠋⠁⠀⠀⠀⠀⠀⠀⠈⠉⠉⠓⠾⣝⡲⣄⣀⣀⣀⣀⣀⡀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢮⡹⣄⠀⠀⠈⠉⠓⢆⠀
@@ -53,7 +53,7 @@ def glob(tipo):
 ⠀⣰⠋⠀⠸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠴⠚⠉⠀⠀⠀⠀⠀⢀⣠⠖⠋⠀⢀⡇⠀⠀⠀⠀
 ⢰⠃⠀⠀⠀⣳⣀⣀⣀⣠⡤⠴⠖⠚⠉⠁⠀⠀⠀⠀⠀⢀⣠⡴⠚⠉⠀⠀⠀⠀⡼⠀⠀⠀⠀⠀
 ⢸⣿⡀⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠴⠚⠉⠀⠀⠀⠀⠀⠀⢀⡼⠁⠀⠀⠀⠀⠀
-⠀⠱⢿⣶⡤⠀⠀⠀⠀⢀⣀⣀⣤⠤⠖⠚⠉⠁⠀⠀⠀⠀⠀⠀⠀⢀⡴⣠⠎⠀⠀⠀⠀⠀⠀⠀
+⠀⠱⢿⣶⡤⠀⠀⠀⠀⢀⣀⣀⣤⠤⠖⠚⠉⠁⠀⠀⠀⠀⠀⠀⠀⢀⡴⣠⠎⠀⠀⠀⠀⠀Sistema Executado em: {sys.system}⠀⠀
 ⠀⠀⠀⠈⠉⠉⠉⠉⠉⠙⠧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣚⡽⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠓⠦⠤⢤⣤⣤⣤⠤⠴⠒⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
@@ -90,12 +90,12 @@ def carregar_modulos(pacotes):
     glob(00)
     print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Todos os módulos estão instalados.\n      Sistema sendo Iniciado...")
 
-carregar_modulos(["colour","time","pytz","datetime","socket","http.client","requests"])
+carregar_modulos(["sys","time","pytz","datetime","socket","http.client","requests"])
 import socket
 import http.client
 import requests
 import pytz
-from colour import Color
+import sys
 from datetime import datetime
 import whois
 
