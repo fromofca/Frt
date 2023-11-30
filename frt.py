@@ -4,8 +4,8 @@ def glob(tipo):
     if tipo == 1:
         cores = [
         '\33[1;92m',
-        '\33[92m',
-        '\33[32m',
+        '\33[0;32m',
+        '\33[1;92m',
         ]
     if tipo == 2:
         cores = [
