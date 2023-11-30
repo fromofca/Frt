@@ -54,7 +54,8 @@ def glob(tipo):
     for i, linha in enumerate(linhas):
         tamanho = len(linha)
         metade = tamanho // len(cores)
-        espacos = ' ' * i
+        espacos2 = ' ' * i
+        espacos = ' ' * (tamanho - len(espacos2) - len(parte))
         for j, cor in enumerate(cores):
             parte = linha[j * metade : (j + 1) * metade]
             print(f'{espacos}{cor}{parte}', end='')
