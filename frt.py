@@ -309,7 +309,7 @@ def dom_servidores(servidor, tt):
             print(f"     \033[0;32m+ {server} \033[1;92m{socket.gethostbyname(server)}\033[32m")
         except socket.error as e:
             print(f"     \033[0;91m× {server}")
-    input("\033[1;92m\n        Pressione Enter para voltar.")
+    input("\033[1;92m\n        Pressione Enter para voltar.\n")
     
 def consultar_site():
     os.system("clear")
