@@ -51,16 +51,17 @@ def glob(tipo):
     """
     linhas = texto.split('\n')
     os.system("clear")
+    tamanho_max = max(len(linha) for linha in linhas)
     for i, linha in enumerate(linhas):
+        espacos = ' ' * i
         tamanho = len(linha)
-        metade = tamanho // len(cores)
-        espacos2 = ' ' * i
-        espacos = ' ' * (tamanho - len(espacos2) - len(linha[j * metade : (j + 1) * metade]))
-        for j, cor in enumerate(cores):
-            parte = linha[j * metade : (j + 1) * metade]
-            print(f'{espacos}{cor}{parte}', end='')
+        for j, caractere in enumerate(linha):
+            cor_index = (i + j) % len(cores)  # Alternar as cores a cada caractere
+            cor = cores[cor_index]
+            espacos_parte = ' ' * (tamanho_max - len(espacos) - 1)  # -1 para considerar o caractere
+            print(f'{espacos}{cor}{caractere}{espacos_parte}{reset_cor}')
         print()
-        
+
 import time,subprocess
 
 def tim(tt):
