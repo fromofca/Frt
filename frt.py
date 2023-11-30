@@ -43,8 +43,10 @@ def glob(tipo):
 ⠀⠱⢿⣶⡤⠀⠀⠀⠀⢀⣀⣀⣤⠤⠖⠚⠉⠁⠀⠀⠀⠀⠀⠀⠀⢀⡴⣠⠎⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠈⠉⠉⠉⠉⠉⠙⠧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣚⡽⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠓⠦⠤⢤⣤⣤⣤⠤⠴⠒⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
 ⠀⠀⠀⠀⠀⠀ """
     linhas = texto.split('\n')
+    os.system("clear")
     for i, linha in enumerate(linhas):
         tamanho = len(linha)
         metade = tamanho // len(cores)
@@ -351,14 +353,14 @@ def atualizacoes():
                 else:
                     os.system("clear")
                     glob(1)
-                    print(" Nenhuma Alteração Encontrada")
         print(" Versão do Sistema: v0.25\n")
         print("     Bugs")
         print(" [29/11] Menu de sair do sistema resolvido")
         print(" [29/11] Menu de voltar das atualizações")
         print(" [29/11] Módulo whois do menu de Consutar IP resolvido (consulta)")
         print("\n     Alterações")
-        print(" [29/11] Código de execução público com menos delay")
+        print(" [30/11] Novo layout pro sistema")
+        print(" [29/11] Código de execução com menos delay")
         print(" [29/11] Menu de carregamento com menos delay")
         print("\n     Novidades")
         print("\n  + = Feito\n  % = Pendente\n")
