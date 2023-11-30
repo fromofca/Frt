@@ -12,23 +12,19 @@ def msg(tipo,msg):
         ]
     elif tipo == 2:
         cores = [
-        '\033[2;31m',
-        '\033[0;91m',
-        '\033[91m',
-        '\033[1;31m',
-        '\033[31m',
-        ]
-    elif tipo == 3:
-        cores = [
-        '\033[1;97',
-        '\033[0;97m',
-        '\033[1;37m',
-        ]
+        '\33[38;5;52m',
+        '\33[38;5;88m',
+        '\33[38;5;124m',
+        '\33[38;5;160m',
+        '\33[38;5;196m',
+	]
     else:
         cores = [
-        '\033[1;97m',
-        '\033[0;97m',
-        '\033[1;37m',
+        '\33[38;5;18m',
+        '\33[38;5;25m',
+        '\33[38;5;32m',
+        '\33[38;5;33m',
+        '\33[38;5;39m',
         ]
         
     reset_cor = '\033[0m'
@@ -305,10 +301,10 @@ def dom_servidores(servidor, tt):
     for server in servidor:
         try:
             socket.create_connection((server, 53), timeout=int(tempo))
-            print(f"     \033[0;32m+ {server} \033[1;92m{socket.gethostbyname(server)}\033[32m")
+            print(f"     + {server} {socket.gethostbyname(server)}\033[32m")
         except socket.error as e:
-            print(f"     \033[0;91m× {server}")
-    input("\033[1;92m\n        Pressione Enter para voltar.\n")
+            print(f"     × {server}")
+    input("\n        Pressione Enter para voltar.\n")
     
 def consultar_site():
     os.system("clear")
