@@ -103,12 +103,12 @@ def menu(tipo):
     if tipo == 1:
         print("      Developer: From")
         print("      Discord: fromdev#0")
-        print("      MENU: Principal\n")
+        print("      MENU Principal\n")
         print("2 - Consulta")
         print("1 - Atualizações")
         print("0 - Sair")
     elif tipo == 2:
-        print("      MENU: Consulta\n")
+        print("      MENU Consulta\n")
         print("2 - Consultar IP")
         print("1 - Consultar Site")
         print("0 - Voltar")
@@ -357,6 +357,7 @@ def atualizacoes():
         print(" [29/11] Menu de voltar das atualizações")
         print(" [29/11] Menu de Consutar IP resolvido (consulta)")
         print("\n     Alterações")
+        print(" [30/11] Novas cores pro sistema")
         print(" [30/11] Novo layout pro sistema")
         print(" [29/11] Código de execução com menos delay")
         print(" [29/11] Menu de carregamento com menos delay")
