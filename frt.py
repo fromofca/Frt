@@ -40,7 +40,7 @@ def msg(tipo,msg):
         metade = tamanho // len(cores)
         for j, cor in enumerate(cores):
             parte = linha[j * metade : (j + 1) * metade]
-            print(f'{cor}{parte}', end='')
+            print(f'{cor}{parte}\033[0;0m', end='')
     
         print()
 
@@ -75,7 +75,7 @@ def tim(tt):
 def carregar_modulos(pacotes):
     os.system("clear")
     glob(00)
-    msg(00,"\n      Developer: From\n      Discord: fromdev#0\n\n      Verificando Módulos...\n\033[0m")
+    msg(00,"\n      Developer: From\n      Discord: fromdev#0\n\n      Verificando Módulos...\n")
     for pacote in pacotes:
         try:
             modulo = __import__(pacote)
@@ -93,7 +93,7 @@ def carregar_modulos(pacotes):
     input("a")
     os.system("clear")
     glob(00)
-    print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Todos os módulos estão instalados.\n      Sistema sendo Iniciado...\033[0m")
+    print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Todos os módulos estão instalados.\n      Sistema sendo Iniciado...")
 
 carregar_modulos(["colour","time","pytz","datetime","socket","http.client","requests"])
 import socket
@@ -416,7 +416,7 @@ def main():
             os.system("clear")
             os.system("clear")
             glob(2)
-            print("\033[0;31mPrograma Finalizado.\033[0;0m")
+            msg(2,"Programa Finalizado.")
             exit()
             break
         else:
