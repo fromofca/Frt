@@ -361,7 +361,7 @@ def atualizacoes():
                     glob(1)
                     print(" Nenhuma Alteração Encontrada")
         print(" Versão do Sistema: v0.25\n")
-        print("\n     Bugs")
+        print("     Bugs")
         print(" [29/11] Menu de sair do sistema resolvido")
         print(" [29/11] Menu de voltar das atualizações")
         print(" [29/11] Módulo whois do menu de Consutar IP resolvido (consulta)")
