@@ -35,7 +35,6 @@ def msg(tipo,msg):
 
     texto = msg
     linhas = texto.split('\n')
-    os.system("clear")
     for i, linha in enumerate(linhas):
         tamanho = len(linha)
         metade = tamanho // len(cores)
