@@ -40,7 +40,7 @@ def msg(tipo,msg):
         metade = tamanho // len(cores)
         for j, cor in enumerate(cores):
             parte = linha[j * metade : (j + 1) * metade]
-            print(f'{cor}{parte}\033[0;0m', end='')
+            print(f'{cor}{parte}', end='')
     
         print()
 
@@ -75,22 +75,21 @@ def tim(tt):
 def carregar_modulos(pacotes):
     os.system("clear")
     glob(00)
-    msg(00,"\n      Developer: From\n      Discord: fromdev#0\n\n      Verificando Módulos...\n")
+    print("\n      Developer: From\n      Discord: fromdev#0\n\n      Verificando Módulos...\n")
     for pacote in pacotes:
         try:
             modulo = __import__(pacote)
             globals()[pacote] = modulo
-            msg(00,f"      Módulo {pacote} já está importado.")
+            print(f"      Módulo {pacote} já está importado")
         except ImportError:
             try:
                 __import__(pacote)
-                print(f"      Módulo {pacote} já está instalado.")
+                print(f"      Módulo {pacote} já está instalado")
             except Exception:
-                print(f"      Módulo {pacote} está sendo instalado.")
+                print(f"      Módulo {pacote} está sendo instalado")
                 resultado = os.system(f'pip install {pacote}')
                 if resultado != 0: 
                     print(f"      Falha ao instalar o módulo {pacote}")
-    input("a")
     os.system("clear")
     glob(00)
     print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Todos os módulos estão instalados.\n      Sistema sendo Iniciado...")
@@ -416,7 +415,7 @@ def main():
             os.system("clear")
             os.system("clear")
             glob(2)
-            msg(2,"Programa Finalizado.")
+            print("Programa Finalizado.\033[0m\n")
             exit()
             break
         else:
