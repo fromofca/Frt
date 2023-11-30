@@ -96,8 +96,11 @@ def carregar_modulos(pacotes):
     glob(33)
     print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Todos os módulos estão instalados.\n      Sistema sendo Iniciado...\033[0m")
     time.sleep(1.25)
-    
-carregar_modulos(["time","pytz","datetime","python-whois","futures","PySocks","socket","http.client","requests"])
+
+try:
+    import pytz
+except Exception as e:
+    carregar_modulos(["time","pytz","datetime","python-whois","futures","PySocks","socket","http.client","requests"])
 import socket
 import http.client
 import requests
