@@ -8,7 +8,7 @@ def glob(tipo):
         '\33[32m',
         '\33[1;92m',
         ]
-    if tipo == 2:
+    elif tipo == 2:
         cores = [
         '\033[2;31m',
         '\033[0;91m',
@@ -16,13 +16,13 @@ def glob(tipo):
         '\033[1;31m',
         '\033[31m',
         ]
-    if tipo == 3:
+    elif tipo == 3:
         cores = [
         '\033[1;97',
         '\033[0;97m',
         '\033[1;37m',
         ]
-    if tipo == 33:
+    else tipo == 33:
         cores = [
         '\033[1;97m',
         '\033[0;97m',
@@ -306,7 +306,7 @@ def dom_servidores(servidor, tt):
     for server in servidor:
         try:
             socket.create_connection((server, 53), timeout=int(tempo))
-            print(f"     \033[0;32m+ {server} \033[1;92mIP: {socket.gethostbyname(server)}\033[32m")
+            print(f"     \033[0;32m+ {server} \033[1;92m{socket.gethostbyname(server)}\033[32m")
         except socket.error as e:
             print(f"     \033[0;91m× {server}")
     input("\033[1;92m\n        Pressione Enter para voltar.")
