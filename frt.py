@@ -89,7 +89,8 @@ def carregar_modulos(pacotes):
                 print(f"      Módulo {pacote} está sendo instalado.")
                 resultado = os.system(f'pip install {pacote}')
                 if resultado != 0: 
-                    print(f"      Falha ao instalar o módulo {pacote}.")
+                    print(f"      Falha ao instalar o módulo {pacote}")
+    input("a")
     os.system("clear")
     glob(00)
     print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Todos os módulos estão instalados.\n      Sistema sendo Iniciado...\033[0m")
