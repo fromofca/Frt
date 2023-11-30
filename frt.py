@@ -53,12 +53,10 @@ def glob(tipo):
     os.system("clear")
     tamanho_max = max(len(linha) for linha in linhas)
     for i, linha in enumerate(linhas):
-        espacos = ' ' * i
         tamanho = len(linha)
         metade = tamanho // len(cores)
         for j, cor in enumerate(cores):
             parte = linha[j * metade : (j + 1) * metade]
-            espacos_parte = ' ' * (tamanho_max - len(espacos) - len(parte))
             print(f'{espacos}{cor}{parte}{espacos_parte}')
         print()
 
