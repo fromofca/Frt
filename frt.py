@@ -41,6 +41,11 @@ def msg(tipo,msg):
         print()
 
 def glob(tipo):
+	try:
+	    import sys
+	    msm = f"Sistema Executado em: {sys.system}"
+	except Execption:
+	    msm = " "	
 	msg(tipo,f"""
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠤⠖⣒⣒⣒⣒⡲⠦⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠖⠋⠁⠀⠀⠀⠀⠀⠀⠈⠉⠉⠓⠾⣝⡲⣄⣀⣀⣀⣀⣀⡀⠀⠀⠀
@@ -53,7 +58,7 @@ def glob(tipo):
 ⠀⣰⠋⠀⠸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠴⠚⠉⠀⠀⠀⠀⠀⢀⣠⠖⠋⠀⢀⡇⠀⠀⠀⠀
 ⢰⠃⠀⠀⠀⣳⣀⣀⣀⣠⡤⠴⠖⠚⠉⠁⠀⠀⠀⠀⠀⢀⣠⡴⠚⠉⠀⠀⠀⠀⡼⠀⠀⠀⠀⠀
 ⢸⣿⡀⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠴⠚⠉⠀⠀⠀⠀⠀⠀⢀⡼⠁⠀⠀⠀⠀⠀
-⠀⠱⢿⣶⡤⠀⠀⠀⠀⢀⣀⣀⣤⠤⠖⠚⠉⠁⠀⠀⠀⠀⠀⠀⠀⢀⡴⣠⠎⠀⠀⠀⠀⠀Sistema Executado em: {sys.system}⠀⠀
+⠀⠱⢿⣶⡤⠀⠀⠀⠀⢀⣀⣀⣤⠤⠖⠚⠉⠁⠀⠀⠀⠀⠀⠀⠀⢀⡴⣠⠎⠀⠀⠀⠀⠀{msm}⠀⠀
 ⠀⠀⠀⠈⠉⠉⠉⠉⠉⠙⠧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣚⡽⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠓⠦⠤⢤⣤⣤⣤⠤⠴⠒⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
@@ -95,7 +100,6 @@ import socket
 import http.client
 import requests
 import pytz
-import sys
 from datetime import datetime
 import whois
 
