@@ -3,9 +3,9 @@ import os
 def glob(tipo):
     if tipo == 1:
         cores = [
-        '\33[92m',
-        '\33[92m',
-        '\33[32m',
+        '\33[97m',
+        '\33[96m',
+        '\33[97m',
         ]
     if tipo == 2:
         cores = [
