@@ -1,4 +1,46 @@
 import os
+import time,subprocess
+
+def tim(tt):
+    min = (tt//60)
+    ss = (tt%60)
+    if min > 0:
+        return f"{min}min {ss}s"
+    elif ss > 0:
+        return f"{ss}s"
+    else:
+        return "0s"
+
+def carregar_modulos(pacotes):
+    os.system("clear")
+    glob(3)
+    print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Verificando Módulos...\n\033[0m")
+    for pacote in pacotes:
+        try:
+            modulo = __import__(pacote)
+            globals()[pacote] = modulo
+            print(f"      Módulo \033[97m{pacote}\033[37m já está importado.")
+        except ImportError:
+            try:
+                __import__(pacote)
+                print(f"      Módulo \033[97m{pacote}\033[37m já está instalado.")
+            except Exception:
+                print(f"      Módulo \033[97m{pacote}\033[37m está sendo instalado.")
+                resultado = os.system(f'pip install {pacote}')
+                if resultado != 0:
+                    print(f"      Falha ao instalar o módulo {pacote}.")
+    os.system("clear")
+    glob(33)
+    print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Todos os módulos estão instalados.\n      Sistema sendo Iniciado...\033[0m")
+
+carregar_modulos(["colour","time","pytz","datetime","socket","http.client","requests"])
+import socket
+import http.client
+import requests
+import pytz
+from colour import Color
+from datetime import datetime
+import whois
 
 def glob(tipo):
     if tipo == 1:
@@ -59,47 +101,7 @@ def glob(tipo):
     
         print()
 
-import time,subprocess
 
-def tim(tt):
-    min = (tt//60)
-    ss = (tt%60)
-    if min > 0:
-        return f"{min}min {ss}s"
-    elif ss > 0:
-        return f"{ss}s"
-    else:
-        return "0s"
-
-def carregar_modulos(pacotes):
-    os.system("clear")
-    glob(3)
-    print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Verificando Módulos...\n\033[0m")
-    for pacote in pacotes:
-        try:
-            modulo = __import__(pacote)
-            globals()[pacote] = modulo
-            print(f"      Módulo \033[97m{pacote}\033[37m já está importado.")
-        except ImportError:
-            try:
-                __import__(pacote)
-                print(f"      Módulo \033[97m{pacote}\033[37m já está instalado.")
-            except Exception:
-                print(f"      Módulo \033[97m{pacote}\033[37m está sendo instalado.")
-                resultado = os.system(f'pip install {pacote}')
-                if resultado != 0:
-                    print(f"      Falha ao instalar o módulo {pacote}.")
-    os.system("clear")
-    glob(33)
-    print(f"\n      Developer: From\n      Discord: fromdev#0\n\n      Todos os módulos estão instalados.\n      Sistema sendo Iniciado...\033[0m")
-
-carregar_modulos(["time","pytz","datetime","python-whois","futures","PySocks","socket","http.client","requests"])
-import socket
-import http.client
-import requests
-import pytz
-from datetime import datetime
-import whois
 def menu(tipo):
     if tipo == 1:
         print("      Developer: From")
