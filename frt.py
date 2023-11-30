@@ -68,7 +68,7 @@ def glob(tipo):
         metade = tamanho // len(cores)
         for j, cor in enumerate(cores):
             parte = linha[j * metade : (j + 1) * metade]
-            print(f'{cor}{parte}{espacos_parte}')
+            print(f'{cor}{parte}')
         print()
 
 import time,subprocess
