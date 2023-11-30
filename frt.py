@@ -103,7 +103,7 @@ import http.client
 import requests
 import pytz
 from datetime import datetime
-from whois import whois
+import whois
 def menu(tipo):
     if tipo == 1:
         print("      Developer: From")
