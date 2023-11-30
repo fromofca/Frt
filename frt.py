@@ -339,7 +339,7 @@ def atualizacoes():
     response = requests.get("https://api.github.com/repos/fromofca/Frt")
     os.system("clear")
     glob(1)
-    print("\n     Carregado!\n")
+    print("\n     Carregado, Aguarde alguns instantes!\n")
     while True:
         if response.status_code == 200:
             commits_url = response.json()["commits_url"].split("{")[0]
@@ -352,12 +352,13 @@ def atualizacoes():
                     commit_datetime = datetime.strptime(latest_commit_time, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
                     commit_datetime = commit_datetime.astimezone(timezone)
                     formatted_time = commit_datetime.strftime("%d/%m/%Y ás %H:%M:%S")
+                    os.system("clear")
+                    glob(1)
                     print(" Total de Alterações:", len(commits))
                     print(" Ultima Alteração feita Em:", formatted_time)
                 else:
                     os.system("clear")
                     glob(1)
-                    print("\n     Carregado!\n")
                     print(" Nenhuma Alteração Encontrada")
         print(" Versão do Sistema: v0.25\n")
         print("\n     Bugs")
