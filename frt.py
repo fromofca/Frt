@@ -40,7 +40,8 @@ from colour import Color
 from datetime import datetime
 import whois
 
-def glob(tipo):
+
+def msg(tipo,msg):
     if tipo == 1:
         cores = [
         '\33[38;5;125m',
@@ -72,7 +73,20 @@ def glob(tipo):
         
     reset_cor = '\033[0m'
 
-    texto = """
+    texto = msg
+    linhas = texto.split('\n')
+    os.system("clear")
+    for i, linha in enumerate(linhas):
+        tamanho = len(linha)
+        metade = tamanho // len(cores)
+        for j, cor in enumerate(cores):
+            parte = linha[j * metade : (j + 1) * metade]
+            print(f'{cor}{parte}', end='')
+    
+        print()
+
+def glob(tipo):
+	msg(tipo,""""
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠤⠖⣒⣒⣒⣒⡲⠦⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠖⠋⠁⠀⠀⠀⠀⠀⠀⠈⠉⠉⠓⠾⣝⡲⣄⣀⣀⣀⣀⣀⡀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢮⡹⣄⠀⠀⠈⠉⠓⢆⠀
@@ -88,19 +102,7 @@ def glob(tipo):
 ⠀⠀⠀⠈⠉⠉⠉⠉⠉⠙⠧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣚⡽⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠓⠦⠤⢤⣤⣤⣤⠤⠴⠒⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-⠀⠀⠀⠀⠀⠀ """
-    linhas = texto.split('\n')
-    os.system("clear")
-    for i, linha in enumerate(linhas):
-        tamanho = len(linha)
-        metade = tamanho // len(cores)
-        for j, cor in enumerate(cores):
-            parte = linha[j * metade : (j + 1) * metade]
-            print(f'{cor}{parte}', end='')
-    
-        print()
-
-
+⠀⠀⠀⠀⠀⠀ """")
 def menu(tipo):
     if tipo == 1:
         print("      Developer: From")
