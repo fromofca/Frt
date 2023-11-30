@@ -43,7 +43,7 @@ def msg(tipo,msg):
 def glob(tipo):
 	try:
 	    import sys
-	    msm = f"Sistema Executado em: {sys.system}"
+	    msm = f"Sistema Executado em: {sys.platform}"
 	except Exception:
 	    msm = " "	
 	msg(tipo,f"""
