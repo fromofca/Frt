@@ -41,11 +41,10 @@ def msg(tipo,msg):
         print()
 
 def glob(tipo):
-	msm = []
 	try:
 	    import sys
 	    msm = f"Sistema Executado em: {sys.system}"
-	except Execption:
+	except Exception:
 	    msm = " "	
 	msg(tipo,f"""
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠤⠖⣒⣒⣒⣒⡲⠦⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
