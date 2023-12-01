@@ -72,7 +72,7 @@ os.system("clear")
 glob(22)
 print("     Carregando Sistema..")
 response2 = requests.get("https://api.github.com/repos/fromofca/Frt")
-if response.status_code == 200:
+if response2.status_code == 200:
     commits_url2 = response2.json()["commits_url"].split("{")[0]
     commits_response2 = requests.get(commits_url2)
 if commits_response2.status_code == 200:
