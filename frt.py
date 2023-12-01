@@ -11,7 +11,7 @@ import base64,requests
 def glob(tipo):
     response = requests.get("https://api.github.com/repos/fromofca/Frt/contents/Msg/glob.py")
     if "content" in response.json():
-        exec(base64.b64decode(response.json()["content"]).decode("utf-8"), glob2(tipo))
+        exec(base64.b64decode(response.json()["content"]).decode("utf-8"))
 def tim(tt):
     min = (tt//60)
     ss = (tt%60)
