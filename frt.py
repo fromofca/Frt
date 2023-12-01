@@ -30,10 +30,6 @@ def glob(tipo):
             parte = linha[j * metade : (j + 1) * metade]
             print(f'{cor}{parte}',end='')
         print()
-os.system("clear")
-glob(22)
-print("     Carregando Sistema..")
-versão = "v0.25"
 def tim(tt):
     min = (tt//60)
     ss = (tt%60)
@@ -72,7 +68,21 @@ import requests
 import pytz
 from datetime import datetime
 import whois
-
+os.system("clear")
+glob(22)
+print("     Carregando Sistema..")
+response2 = requests.get("https://api.github.com/repos/fromofca/Frt")
+if response.status_code == 200:
+commits_url2 = response2.json()["commits_url"].split("{")[0]
+commits_response2 = requests.get(commits_url2)
+if commits_response2.status_code == 200:
+commits2 = commits_response2.json()
+latest_commit_time2 = commits[0]["commit"]["committer"]["date"]
+timezone2 = pytz.timezone('America/Sao_Paulo')
+commit_datetime2 = datetime.strptime(latest_commit_time2, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
+commit_datetime2 = commit_datetime2.astimezone(timezone2)
+formatted_time2 = commit_datetime2.strftime("%d/%m/%Y ás %H:%M:%S")
+versão = "v0.25"
 def menu(tipo):
     if tipo == 1:
         print("      Developer: From")
@@ -320,6 +330,8 @@ def atualizacoes():
                     formatted_time = commit_datetime.strftime("%d/%m/%Y ás %H:%M:%S")
                     os.system("clear")
                     glob(1)
+                    if formatted_time != formatted_time2:
+                        print("\n    Nova Atualização Detectada.\n    Execute o script novamente.\n")
                     print(" Ultima Alteração feita Em:", formatted_time)
                 else:
                     os.system("clear")
