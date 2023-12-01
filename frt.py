@@ -77,7 +77,7 @@ if response2.status_code == 200:
     commits_response2 = requests.get(commits_url2)
 if commits_response2.status_code == 200:
     commits2 = commits_response2.json()
-    latest_commit_time2 = commits[0]["commit"]["committer"]["date"]
+    latest_commit_time2 = commits2[0]["commit"]["committer"]["date"]
     timezone2 = pytz.timezone('America/Sao_Paulo')
     commit_datetime2 = datetime.strptime(latest_commit_time2, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
     commit_datetime2 = commit_datetime2.astimezone(timezone2)
