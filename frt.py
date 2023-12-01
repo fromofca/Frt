@@ -43,7 +43,7 @@ def msg(tipo,msg):
 def glob(tipo):
 	try:
 	    import sys
-	    msm = sys.platform
+	    msm = sys.platform.replace("lin", "linux")
 	except Exception:
 	    msm = ""	
 	msg(tipo,f"""
