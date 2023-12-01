@@ -90,9 +90,9 @@ versão = "v0.25"
 def menu(tipo):
     print("      Developer: From\n      Discord: fromdev#0")
     if tipo == 1:
-        print("      MENU Principal\n0- Sair\n\n1 - Checar Atualização\n2 - Consultar")
+        print("      MENU Principal\n\n0- Sair\n1 - Checar Atualização\n2 - Consultar")
     elif tipo == 2:
-        print("      MENU Consulta\n0 - Voltar\n\n1 - Consultar Site\n 2 - Consultar IP")
+        print("      MENU Consulta\n\n0 - Voltar\n1 - Consultar Site\n2 - Consultar IP")
     else: 
         print("      MENU: Inválido")
         print("\n0 - Voltar\n\nOcorreu um erro ao tentar carregar este menu, informe ao programador do sistema.")
@@ -153,7 +153,6 @@ def consulta_info2(endereco):
             input("        Pressione Enter para voltar.\n")
         else:
             os.system("clear")
-            os.system("clear")
             glob(1)
             print("\n        Carregado!\n")
             print(" Status:",data['status'],"\n")
@@ -192,9 +191,7 @@ def consulta_endereco(endereco):
                 
 def dominio_menu(servidor):
     while True:
-        print("\n2 - Consultar novamente")
-        print("1 - Status dos servidores")
-        print("0 - Voltar")
+        print("0 - Voltar\n1- Status dos Servidores\n2 - Consultar Novamente")
         dom = input("\n> ")
         
         if dom == "2":
@@ -202,24 +199,20 @@ def dominio_menu(servidor):
             break
         elif dom == "1":
             os.system("clear")
-            os.system("clear")
             glob(1)
             dominio_servidores(servidor)
             break
         elif dom == "0":
             os.system("clear")
-            os.system("clear")
             break
             menu(2)
         else:
-            os.system("clear")
             os.system("clear")
             glob(1)
                 
 def endereco_menu(ip):
     while True:
-        print("\n1 - Consultar novamente")
-        print("0 - Voltar")
+        print("\n0 - Voltar\n1 - Consultar Novamente")
         enc = input("\n> ")
         
         if enc == "1":
@@ -227,21 +220,15 @@ def endereco_menu(ip):
             break
         elif enc == "0":
             os.system("clear")
-            os.system("clear")
             break
             menu(2)
         else:
-            os.system("clear")
             os.system("clear")
             glob(1)
     
 def dominio_servidores(servidor):
     while True:
-        print("\n    Tipos de Conexões\n")
-        print("3 - Longo [5s]")
-        print("2 - Mediano [2.5s]")
-        print("1 - Curto [1s]")
-        print("0 - Voltar")
+        print("\n    Tipos de Conexões\n\n0 - Voltar\n1 - Curto [1s]\n2 - Mediano [2.5s]\n3 - Longo [5s]")
         dom = input("\n> ")
         
         if dom == "3":
@@ -255,11 +242,9 @@ def dominio_servidores(servidor):
             break
         elif dom == "0":
             os.system("clear")
-            os.system("clear")
             menu(2)
             break
         else:
-            os.system("clear")
             os.system("clear")
             glob(1)
             
@@ -288,7 +273,6 @@ def dom_servidores(servidor, tt):
     
 def consultar_site():
     os.system("clear")
-    os.system("clear")
     glob(1)
     dominio = input("\n0 - Voltar\n\n   Domínio: ")
     if dominio == "0":
@@ -297,7 +281,6 @@ def consultar_site():
         consulta_dominio(dominio)
     
 def consultar_endereço():
-    os.system("clear")
     os.system("clear")
     glob(1)
     endereco = input("\n0 - Voltar\n\n   IP: ")
@@ -343,17 +326,14 @@ def main():
         if opcao_principal == "2":
             while True:
                 os.system("clear")
-                os.system("clear")
                 glob(1)
                 menu(2)
                 opcao_consulta = input("\n>  ")
                 if opcao_consulta == "2":
                     os.system("clear")
-                    os.system("clear")
                     glob(1)
                     consultar_endereço()
                 elif opcao_consulta == "1":
-                    os.system("clear")
                     os.system("clear")
                     glob(1)
                     consultar_site()
@@ -363,11 +343,9 @@ def main():
                     print(" ")
         elif opcao_principal == "1":
             os.system("clear")
-            os.system("clear")
             glob(1)
             atualizacoes()
         elif opcao_principal == "0":
-            os.system("clear")
             os.system("clear")
             glob(2)
             print("Programa Finalizado.\033[0m\n")
