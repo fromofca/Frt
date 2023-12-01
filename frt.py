@@ -18,7 +18,7 @@ def glob(tipo):
 """
     if tipo == 1:
         cores = ['\33[1;38;5;125m','\33[38;6;126m','\33[38;5;127m','\33[38;5;128m','\33[38;5;129m']
-    elif tipo == 2:
+    elif tipo == 22:
         cores = ['\33[38;5;22m','\33[38;6;28m','\33[38;5;34m','\33[38;5;40m','\33[38;5;46m']
     else:
         cores = ['\33[38;5;53m','\33[38;5;54m','\33[38;5;55m','\33[38;5;56m','\33[38;5;57m']
@@ -31,7 +31,7 @@ def glob(tipo):
             print(f'{cor}{parte}',end='')
         print()
 os.system("clear")
-glob(2)
+glob(22)
 print("     Carregando Sistema..")
 input("")
 def tim(tt):
