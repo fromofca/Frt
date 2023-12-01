@@ -41,11 +41,6 @@ def msg(tipo,msg):
         print()
 
 def glob(tipo):
-	try:
-	    import sys
-	    msm = f"       • {sys.platform}"
-	except Exception:
-	    msm = ""	
 	msg(tipo,f"""
             
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠤⠖⣒⣒⣒⣒⡲⠦⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -63,7 +58,6 @@ def glob(tipo):
 ⠀⠀⠀⠈⠉⠉⠉⠉⠉⠙⠧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣚⡽⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠓⠦⠤⢤⣤⣤⣤⠤⠴⠒⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀ """)
-	msg(tipo,f"{msm}\n")
 	
 def tim(tt):
     min = (tt//60)
