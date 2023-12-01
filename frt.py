@@ -72,16 +72,20 @@ os.system("clear")
 glob(22)
 print("     Carregando Sistema..")
 response2 = requests.get("https://api.github.com/repos/fromofca/Frt")
-if response2.status_code == 200:
-    commits_url2 = response2.json()["commits_url"].split("{")[0]
-    commits_response2 = requests.get(commits_url2)
-if commits_response2.status_code == 200:
-    commits2 = commits_response2.json()
-    latest_commit_time2 = commits2[0]["commit"]["committer"]["date"]
-    timezone2 = pytz.timezone('America/Sao_Paulo')
-    commit_datetime2 = datetime.strptime(latest_commit_time2, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
-    commit_datetime2 = commit_datetime2.astimezone(timezone2)
-    formatted_time2 = commit_datetime2.strftime("%d/%m/%Y ás %H:%M:%S")
+try:
+    if response2.status_code == 200:
+        commits_url2 = response2.json()["commits_url"].split("{")[0]
+        commits_response2 = requests.get(commits_url2)
+    if commits_response2.status_code == 200:
+        commits2 = commits_response2.json()
+        latest_commit_time2 = commits2[0]["commit"]["committer"]["date"]
+        timezone2 = pytz.timezone('America/Sao_Paulo')
+        commit_datetime2 = datetime.strptime(latest_commit_time2, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
+        commit_datetime2 = commit_datetime2.astimezone(timezone2)
+        formatted_time2 = commit_datetime2.strftime("%d/%m/%Y ás %H:%M:%S")
+except Exception:
+    print("     Erro ao tentar Carregar Sistema\n\033[0m")
+    exit()
 versão = "v0.25"
 def menu(tipo):
     print("      Developer: From\n      Discord: fromdev#0")
