@@ -326,43 +326,35 @@ def atualizacoes():
             commits_response = requests.get(commits_url)
             if commits_response.status_code == 200:
                 commits = commits_response.json()
-                if len(commits) > 0:
-                    latest_commit_time = commits[0]["commit"]["committer"]["date"]
-                    timezone = pytz.timezone('America/Sao_Paulo')
-                    commit_datetime = datetime.strptime(latest_commit_time, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
-                    commit_datetime = commit_datetime.astimezone(timezone)
-                    formatted_time = commit_datetime.strftime("%d/%m/%Y ás %H:%M:%S")
-                    os.system("clear")
-                    glob(1)
-                    if formatted_time != formatted_time2:
-                        print("\n    Nova Atualização Detectada.\n    Execute o script novamente.\n")
-                    print(" Ultima Alteração feita Em:", formatted_time)
+                latest_commit_time = commits[0]["commit"]["committer"]["date"]
+                timezone = pytz.timezone('America/Sao_Paulo')
+                commit_datetime = datetime.strptime(latest_commit_time, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc)
+                commit_datetime = commit_datetime.astimezone(timezone)
+                formatted_time = commit_datetime.strftime("%d/%m/%Y ás %H:%M:%S")
+                os.system("clear")
+                glob(1)
+                if formatted_time != formatted_time2:
+                    print("\n    Nova Atualização Detectada\n    Execute o script novamente\n")
                 else:
-                    os.system("clear")
+                    print(" Ultima Alteração feita Em:", formatted_time)
                     glob(1)
-        print(f" Versão do Sistema: {versão}\n")
-        print("     Bugs")
-        print(" [29/11] Menu de sair do sistema resolvido")
-        print(" [29/11] Menu de voltar das atualizações")
-        print(" [29/11] Menu de Consutar IP resolvido (consulta)")
-        print("\n     Alterações")
-        print(" [30/11] Novas cores pro sistema")
-        print(" [30/11] Novo layout pro sistema")
-        print(" [29/11] Código de execução com menos delay")
-        print(" [29/11] Menu de carregamento com menos delay")
-        print("\n     Novidades")
-        print("\n  + = Feito\n  % = Pendente\n")
-        print(" + [29/11] Novo menu de Atualizações (principal)")
-        print(" % Menu de Info CPF (consulta)")
-        print(" % Menu de Info Minecraft (consulta)")
-        at = input("\n0 - Voltar\n\n> ")
-        if at == "0":
-            main()
-            break
-        else:
-            os.system("clear")
-            os.system("clear")
-            glob(1)
+                    print(f" Versão do Sistema: {versão}\n")
+                    print("     Bugs")
+                    print(" [29/11] Menu de sair do sistema resolvido")
+                    print(" [29/11] Menu de voltar das atualizações")
+                    print(" [29/11] Menu de Consutar IP resolvido (consulta)")
+                    print("\n     Alterações")
+                    print(" [30/11] Novas cores pro sistema")
+                    print(" [30/11] Novo layout pro sistema")
+                    print(" [29/11] Código de execução com menos delay")
+                    print(" [29/11] Menu de carregamento com menos delay")
+                    print("\n     Novidades")
+                    print("\n  + = Feito\n  % = Pendente\n")
+                    print(" + [29/11] Novo menu de Atualizações (principal)")
+                    print(" % Menu de Info CPF (consulta)")
+                    print(" % Menu de Info Minecraft (consulta)")
+        input("\n     Pressione Enter para voltar.\n")
+        break
             
 def main():
     while True:
