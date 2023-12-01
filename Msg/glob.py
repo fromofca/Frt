@@ -27,3 +27,4 @@ def glob2(tipo):
             parte = linha[j * metade : (j + 1) * metade]
             print(f'{cor}{parte}',end='')
         print()
+glob2(tipo)
