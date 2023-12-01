@@ -346,7 +346,6 @@ def atualizacoes():
                     formatted_time = commit_datetime.strftime("%d/%m/%Y ás %H:%M:%S")
                     os.system("clear")
                     glob(1)
-                    print(" Total de Alterações:", len(commits))
                     print(" Ultima Alteração feita Em:", formatted_time)
                 else:
                     os.system("clear")
