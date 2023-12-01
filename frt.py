@@ -21,7 +21,7 @@ def glob(tipo):
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠒⠢⠤⠤⢤⡠⠤⠤⠔⠒⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 """
     if tipo == 1:
-        cores = ['\33[1;38;5;125m','\33[38;6;126m','\33[38;5;127m','\33[38;5;128m','\33[38;5;129m']
+        cores = ['\33[38;5;125m','\33[38;6;126m','\33[38;5;127m','\33[38;5;128m','\33[38;5;129m']
     elif tipo == 22:
         cores = ['\33[38;5;22m','\33[38;6;28m','\33[38;5;34m','\33[38;5;40m','\33[38;5;46m']
     else:
@@ -334,10 +334,9 @@ def atualizacoes():
                 os.system("clear")
                 glob(1)
                 if formatted_time != formatted_time2:
-                    print("\n    Nova Atualização Detectada\n    Execute o script novamente\n")
+                    print("\n    Nova Atualização Detectada\n    Execute o script novamente")
                 else:
                     print(" Ultima Alteração feita Em:", formatted_time)
-                    glob(1)
                     print(f" Versão do Sistema: {versão}\n")
                     print("     Bugs")
                     print(" [29/11] Menu de sair do sistema resolvido")
