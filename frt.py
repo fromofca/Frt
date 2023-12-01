@@ -1,3 +1,7 @@
+"""
+      Código Livre
+      Sem Copyright
+"""
 import os,time,subprocess
 def glob(tipo):
     msg = """⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
