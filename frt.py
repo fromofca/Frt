@@ -353,8 +353,8 @@ def atualizacoes():
                     print(" + [29/11] Novo menu de Atualizações (principal)")
                     print(" % Menu de Info CPF (consulta)")
                     print(" % Menu de Info Minecraft (consulta)")
-        input("\n     Pressione Enter para voltar.\n")
-        break
+                input("\n            Pressione Enter para voltar.\n")
+                break
             
 def main():
     while True:
