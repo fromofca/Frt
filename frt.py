@@ -88,18 +88,11 @@ if commits_response2.status_code == 200:
     formatted_time2 = commit_datetime2.strftime("%d/%m/%Y ás %H:%M:%S")
 versão = "v0.25"
 def menu(tipo):
+    print("      Developer: From\n      Discord: fromdev#0")
     if tipo == 1:
-        print("      Developer: From")
-        print("      Discord: fromdev#0")
-        print("      MENU Principal\n")
-        print("2 - Consultar")
-        print("1 - Checar Atualização")
-        print("0 - Sair")
+        print("      MENU Principal\n0- Sair\n\n1 - Checar Atualização\n2 - Consultar")
     elif tipo == 2:
-        print("      MENU Consulta\n")
-        print("2 - Consultar IP")
-        print("1 - Consultar Site")
-        print("0 - Voltar")
+        print("      MENU Consulta\n0 - Voltar\n\n1 - Consultar Site\n 2 - Consultar IP")
     else: 
         print("      MENU: Inválido")
         print("\n0 - Voltar\n\nOcorreu um erro ao tentar carregar este menu, informe ao programador do sistema.")
@@ -336,7 +329,7 @@ def atualizacoes():
                     print("\n    Nova Atualização Detectada\n    Execute o script novamente")
                 else:
                     print(" Ultima Alteração feita Em:", formatted_time)
-                    print(f" Versão do Sistema: {versão}\n")
+                    print(f" Versão do Sistema: {versão}")
                 input("\n       Pressione Enter para voltar.\n")
                 break
             
