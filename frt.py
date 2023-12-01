@@ -92,8 +92,8 @@ def menu(tipo):
         print("      Developer: From")
         print("      Discord: fromdev#0")
         print("      MENU Principal\n")
-        print("2 - Consulta")
-        print("1 - Atualizações")
+        print("2 - Consultar")
+        print("1 - Checar Atualização")
         print("0 - Sair")
     elif tipo == 2:
         print("      MENU Consulta\n")
@@ -113,7 +113,7 @@ def consulta_info(nome):
             os.system("clear")
             glob(1)
             print("\n        Carregado!\n")
-            if 'name' in info and info['name'] is not None:
+            if info['name'] is not None:
                 try:
                     print(" Nome:", info['name'])
                 except Exception as e:
@@ -337,21 +337,7 @@ def atualizacoes():
                 else:
                     print(" Ultima Alteração feita Em:", formatted_time)
                     print(f" Versão do Sistema: {versão}\n")
-                    print("     Bugs")
-                    print(" [29/11] Menu de sair do sistema resolvido")
-                    print(" [29/11] Menu de voltar das atualizações")
-                    print(" [29/11] Menu de Consutar IP resolvido (consulta)")
-                    print("\n     Alterações")
-                    print(" [30/11] Novas cores pro sistema")
-                    print(" [30/11] Novo layout pro sistema")
-                    print(" [29/11] Código de execução com menos delay")
-                    print(" [29/11] Menu de carregamento com menos delay")
-                    print("\n     Novidades")
-                    print("\n  + = Feito\n  % = Pendente\n")
-                    print(" + [29/11] Novo menu de Atualizações (principal)")
-                    print(" % Menu de Info CPF (consulta)")
-                    print(" % Menu de Info Minecraft (consulta)")
-                input("\n            Pressione Enter para voltar.\n")
+                input("\n       Pressione Enter para voltar.\n")
                 break
             
 def main():
