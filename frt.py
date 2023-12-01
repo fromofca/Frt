@@ -1,45 +1,19 @@
-import os
-import time,subprocess
-
+import os,time,subprocess
 def msg(tipo,msg):
     if tipo == 1:
-        cores = [
-        '\33[38;5;61m',
-        '\33[38;5;68m',
-        '\33[38;5;75m',
-        '\33[38;5;81m',
-        '\33[38;5;87m',
-        ]
+        cores = ['\33[38;5;61m','\33[38;5;68m','\33[38;5;75m','\33[38;5;81m','\33[38;5;87m']
     elif tipo == 2:
-        cores = [
-        '\33[38;5;53m',
-        '\33[38;5;54m',
-        '\33[38;5;55m',
-        '\33[38;5;56m',
-        '\33[38;5;57m',
-	]
+        cores = ['\33[38;5;53m','\33[38;5;54m','\33[38;5;55m','\33[38;5;56m','\33[38;5;57m']
     else:
-        cores = [
-        '\33[38;5;18m',
-        '\33[38;5;25m',
-        '\33[38;5;32m',
-        '\33[38;5;33m',
-        '\33[38;5;39m',
-        ]
-        
-    reset_cor = '\033[0m'
-
-    texto = msg
-    linhas = texto.split('\n')
+        cores = ['\33[38;5;18m','\33[38;5;25m','\33[38;5;32m','\33[38;5;33m','\33[38;5;39m']
+    linhas = msg.split('\n')
     for i, linha in enumerate(linhas):
         tamanho = len(linha)
         metade = tamanho // len(cores)
         for j, cor in enumerate(cores):
             parte = linha[j * metade : (j + 1) * metade]
-            print(f'{cor}{parte}', end='')
-    
+            print(f'{cor}{parte}',end='')
         print()
-
 def glob(tipo):
 	msg(tipo,f"""
             
@@ -58,7 +32,6 @@ def glob(tipo):
 ⠀⠀⠀⠈⠉⠉⠉⠉⠉⠙⠧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣚⡽⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠓⠦⠤⢤⣤⣤⣤⠤⠴⠒⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀ """)
-	
 def tim(tt):
     min = (tt//60)
     ss = (tt%60)
@@ -68,7 +41,6 @@ def tim(tt):
         return f"{ss}s"
     else:
         return "0s"
-
 def carregar_modulos(pacotes):
     os.system("clear")
     glob(00)
