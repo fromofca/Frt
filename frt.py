@@ -1,7 +1,3 @@
-"""
-      Código Livre
-      Sem Copyright
-"""
 import os,time,subprocess
 def glob(tipo):
     msg = """⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -34,15 +30,6 @@ def glob(tipo):
             parte = linha[j * metade : (j + 1) * metade]
             print(f'{cor}{parte}',end='')
         print()
-def tim(tt):
-    min = (tt//60)
-    ss = (tt%60)
-    if min > 0:
-        return f"{min}min {ss}s"
-    elif ss > 0:
-        return f"{ss}s"
-    else:
-        return "0s"
 def carregar_modulos(pacotes):
     os.system("clear")
     glob(00)
@@ -72,6 +59,15 @@ import requests
 import pytz
 from datetime import datetime
 import whois
+def tim(tt):
+    min = (tt//60)
+    ss = (tt%60)
+    if min > 0:
+        return f"{min}min {ss}s"
+    elif ss > 0:
+        return f"{ss}s"
+    else:
+        return "0s"
 os.system("clear")
 glob(22)
 print("     Carregando Sistema..")
