@@ -90,7 +90,7 @@ versão = "v0.25"
 def menu(tipo):
     print("      Developer: From\n      Discord: fromdev#0")
     if tipo == 1:
-        print("      MENU Principal\n\n0- Sair\n1 - Checar Atualização\n2 - Consultar")
+        print("      MENU Principal\n\n0 - Sair\n1 - Checar Atualização\n2 - Consultar")
     elif tipo == 2:
         print("      MENU Consulta\n\n0 - Voltar\n1 - Consultar Site\n2 - Consultar IP")
     else: 
@@ -116,8 +116,6 @@ def consulta_info(nome):
                     print(" Domínio:", info['domain_name'])    
                 except Exception as e:
                     print(" Nenhum domínio Encontrado.")
-            if info['email'] is not None:
-                print(" Gmail:", info['email'])
             if info['creation_date'] is not None:
                 try:
                     print(" Registro:", info['creation_date'][0])
