@@ -5,7 +5,7 @@ def msg(tipo,msg):
     elif tipo == 2:
         cores = ['\33[38;5;18m','\33[38;5;25m','\33[38;5;32m','\33[38;5;33m','\33[38;5;39m']
     else:
-	cores = ['\33[38;5;53m','\33[38;5;54m','\33[38;5;55m','\33[38;5;56m','\33[38;5;57m']
+        cores = ['\33[38;5;53m','\33[38;5;54m','\33[38;5;55m','\33[38;5;56m','\33[38;5;57m']
     linhas = msg.split('\n')
     for i, linha in enumerate(linhas):
         tamanho = len(linha)
