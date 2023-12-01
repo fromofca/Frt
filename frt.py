@@ -107,10 +107,9 @@ def menu(tipo):
 def consulta_info(nome):
     try:
         info = whois.whois(nome)
-        if 'name' in info and info['name'] is None:
+        if info['name'] is None:
             input("\n        Domínio inválido, Pressione Enter para voltar.\n")
         else:
-            os.system("clear")
             os.system("clear")
             glob(1)
             print("\n        Carregado!\n")
@@ -119,29 +118,29 @@ def consulta_info(nome):
                     print(" Nome:", info['name'])
                 except Exception as e:
                     print("Nenhum nome Encontrado")
-            if 'domain_name' in info and info['domain_name'] is not None:
+            if info['domain_name'] is not None:
                 try:
                     print(" Domínio:", info['domain_name'])    
                 except Exception as e:
                     print(" Nenhum domínio Encontrado.")
-            if 'email' in info and info['email'] is not None:
+            if info['email'] is not None:
                 print(" Gmail:", info['email'])
-            if 'creation_date' in info and info['creation_date'] is not None:
+            if info['creation_date'] is not None:
                 try:
                     print(" Registro:", info['creation_date'][0])
                 except Exception as e:
                     print(" Data de Registro não Encontrado.")
-            if 'expiration_date' in info and info['expiration_date'] is not None:
+            if info['expiration_date'] is not None:
                 try:
                     print(" Expiração:", info['expiration_date'][0])
                 except Exception as e:
                     print(" Data de Expiração não Encontrado.")
-            if 'updated_date' in info and info['updated_date'] is not None:
+            if info['updated_date'] is not None:
                 try:
                     print(" Atualização :", info['updated_date'][0])
                 except Exception as e:
                     print(" Data de Atualização não Encontrado.")
-            if 'name_servers' in info and info['name_servers'] is not None:
+            if info['name_servers'] is not None:
                 try:
                     print(" Servidores:\n  ", '\n   '.join(info['name_servers']))
                 except Exception as e:
