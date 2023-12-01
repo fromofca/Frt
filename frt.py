@@ -33,7 +33,6 @@ def glob(tipo):
 os.system("clear")
 glob(22)
 print("     Carregando Sistema..")
-input("")
 def tim(tt):
     min = (tt//60)
     ss = (tt%60)
