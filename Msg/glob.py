@@ -11,7 +11,7 @@ def msg(tipo,msg):
             parte = linha[j * metade : (j + 1) * metade]
             print(f'{cor}{parte}',end='')
         print()
-def glob(tipo):
+def glob2(tipo):
 	msg(tipo,f"""⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠤⠒⢒⣒⣒⣒⠒⠤⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠔⠋⠁⠀⠀⠀⠀⠀⠀⠀⠈⠉⠑⠢⢍⠢⢄⣀⣀⣀⣀⡀⠀⠀⠀⠀
