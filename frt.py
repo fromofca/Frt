@@ -33,6 +33,7 @@ def glob(tipo):
 os.system("clear")
 glob(22)
 print("     Carregando Sistema..")
+versão = "v0.25"
 def tim(tt):
     min = (tt//60)
     ss = (tt%60)
@@ -323,7 +324,7 @@ def atualizacoes():
                 else:
                     os.system("clear")
                     glob(1)
-        print(" Versão do Sistema: v0.25\n")
+        print(f" Versão do Sistema: {versão}\n")
         print("     Bugs")
         print(" [29/11] Menu de sair do sistema resolvido")
         print(" [29/11] Menu de voltar das atualizações")
